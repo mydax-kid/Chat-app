@@ -86,6 +86,7 @@ function Sidebar({ user }) {
     }
   };
 
+  //search for user or group
   const searchUsersAndGroups = async (e) => {
     e.preventDefault();
     const searchValue = e.target.elements.search.value;

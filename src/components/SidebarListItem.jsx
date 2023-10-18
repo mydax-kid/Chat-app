@@ -7,7 +7,7 @@ function SidebarListItem({item}) {
             <div className="sidebar__chat">
                 <div className="avatar__container">
                     <Avatar
-                      src={item.image || `https://api.dicebear.com/7.x/fun-emoji/svg?seed=${item.id}`} 
+                      src={item.photoURL || `https://api.dicebear.com/7.x/fun-emoji/svg?seed=${item.id}`} 
                       style={{width: 45, height: 45 }}
                     />
                 </div>
