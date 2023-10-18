@@ -160,7 +160,7 @@ const Chat = ({ user }) => {
       <div className="chat__background" />
       <div className="chat__header">
         <div className="avatar__container">
-          <Avatar src={chat.photoURL} alt={chat.name} />
+          <Avatar src={chat.image} alt={chat.name} />
         </div>
         
         <div className="chat__header--info">

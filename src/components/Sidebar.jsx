@@ -69,12 +69,16 @@ function Sidebar({ user }) {
 
   //create new group
   const createGroup = async () => {
+    const randomNum = Math.floor(Math.random() * (999 - 100 + 1)) + 100;
+
     if (groupName?.trim()) {
       const colRef = collection(db, "groups");
       const newGroup = await addDoc(colRef, {
         name: groupName,
         timestamp: serverTimestamp(),
+        photoURL: `https://api.dicebear.com/7.x/fun-emoji/svg?seed=${randomNum}`
       });
+      
       setCreatingGroup(false);
       setGroupName("");
       setMenu(2);
